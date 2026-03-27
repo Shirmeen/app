@@ -1,19 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
-import { 
-  Globe, 
-  Gamepad2, 
-  Heart, 
-  Users, 
-  Apple, 
-  Hand, 
-  ShoppingBag, 
-  Wallet, 
-  Brain, 
-  Briefcase, 
-  Scissors, 
-  Dog, 
-  Plane, 
+import {
+  Globe,
+  Gamepad2,
+  Heart,
+  Users,
+  Apple,
+  Hand,
+  ShoppingBag,
+  Wallet,
+  Brain,
+  Briefcase,
+  Scissors,
+  Dog,
+  Plane,
   Scale,
   Coins,
   Smartphone,
@@ -375,9 +375,9 @@ function SDGIcon({ number, size = "md" }: { number: number; size?: "sm" | "md" |
     md: "w-12 h-12 text-sm",
     lg: "w-16 h-16 text-base"
   };
-  
+
   return (
-    <div 
+    <div
       className={`${sizeClasses[size]} rounded-xl flex items-center justify-center text-white font-bold shadow-md`}
       style={{ backgroundColor: sdg?.color || '#666' }}
     >
@@ -404,30 +404,32 @@ function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-pyp-orange rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">PYP</span>
-            </div>
+            <img
+              src="/crescent_logo.png"
+              alt="Crescent Logo"
+              className="w-12 h-12 object-contain"
+            />
             <span className={`font-display font-bold text-lg ${scrolled ? 'text-pyp-dark' : 'text-pyp-dark'}`}>
               PYP V Exhibition
             </span>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <a href="#projects" className="text-pyp-dark hover:text-pyp-orange transition-colors font-medium">Projects</a>
             <a href="#about" className="text-pyp-dark hover:text-pyp-orange transition-colors font-medium">About</a>
             <a href="#sdgs" className="text-pyp-dark hover:text-pyp-orange transition-colors font-medium">SDGs</a>
           </div>
-          
+
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden p-2"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-        
+
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-2">
@@ -447,36 +449,48 @@ function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/hero-bg.jpg" 
-          alt="Background Pattern" 
-          className="w-full h-full object-cover opacity-40"
+        <img
+          src="/pyp-pattern.png" 
+          alt="PYP Geometric Pattern" 
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-pyp-beige/50 via-transparent to-pyp-beige" />
+        <div className="absolute inset-0 bg-gradient-to-b from-pyp-beige/60 via-transparent to-pyp-beige" />
       </div>
-      
+
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-20">
         {/* School Name */}
-        <div className="animate-in mb-6">
+        <div className="animate-in mb-8">
           <p className="text-pyp-dark/80 font-medium text-sm md:text-base uppercase tracking-wider">
             Crescent Model Higher Secondary School
           </p>
-          <p className="text-pyp-dark/80 font-medium text-sm md:text-base">
+          <p className="text-pyp-dark/80 font-medium text-sm md:text-base mb-6">
             Girls Campus
           </p>
+          <p className="text-pyp-dark/90 text-xl md:text-2xl max-w-3xl mx-auto font-medium leading-relaxed bg-white/40 backdrop-blur-sm p-6 rounded-3xl shadow-sm border border-white/50">
+            Explore the diverse range of inquiry-based projects created by our students, 
+            each addressing real-world issues aligned with the UN Sustainable Development Goals.
+          </p>
         </div>
-        
+
         {/* Logos */}
-        <div className="flex justify-center gap-6 mb-8 animate-in-delay-1">
-          <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full shadow-lg flex items-center justify-center animate-float">
-            <span className="text-2xl font-bold text-pyp-green">C</span>
+        <div className="flex justify-center items-center gap-8 mb-8 animate-in-delay-1">
+          <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center p-3 animate-float overflow-hidden">
+            <img
+              src="/crescent_logo.png"
+              alt="Crescent School Logo"
+              className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
+            />
           </div>
-          <div className="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full shadow-lg flex items-center justify-center animate-float" style={{ animationDelay: '0.5s' }}>
-            <span className="text-2xl font-bold text-blue-600">IB</span>
+          <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center p-4 animate-float overflow-hidden" style={{ animationDelay: '0.5s' }}>
+            <img
+              src="/ib-logo.png"
+              alt="IB Logo"
+              className="w-full h-full object-contain"
+            />
           </div>
         </div>
-        
+
         {/* Main Title */}
         <div className="animate-in-delay-2 mb-8">
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-pyp-orange text-shadow-lg">
@@ -486,29 +500,27 @@ function HeroSection() {
             2026
           </p>
         </div>
-        
+
         {/* Tagline */}
+        {/* Tagline & Call to Action */}
         <div className="animate-in-delay-3">
-          <p className="text-pyp-dark text-base md:text-lg max-w-2xl mx-auto mb-8">
-            Empowering young voices through inquiry-based learning and social awareness
-          </p>
-          <a 
-            href="#projects" 
-            className="inline-flex items-center gap-2 bg-pyp-orange text-white px-8 py-3 rounded-full font-semibold hover:bg-pyp-orange/90 transition-all hover:scale-105 shadow-lg"
+          <a
+            href="#projects"
+            className="inline-flex items-center gap-2 bg-pyp-orange text-white px-8 py-3 rounded-full font-semibold hover:bg-pyp-orange/90 transition-all hover:scale-105 shadow-xl"
           >
-            Explore Projects
+            Go to Exhibition
             <ChevronDown className="w-5 h-5" />
           </a>
         </div>
       </div>
-      
+
       {/* Vertical Hashtag */}
       <div className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 hidden lg:block">
         <span className="writing-vertical text-pyp-orange font-display font-bold text-2xl tracking-wider opacity-80">
           #GIRLPOWER
         </span>
       </div>
-      
+
       <style>{`
         .writing-vertical {
           writing-mode: vertical-rl;
@@ -524,7 +536,7 @@ function HeroSection() {
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -535,21 +547,21 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       },
       { threshold: 0.1 }
     );
-    
+
     if (cardRef.current) {
       observer.observe(cardRef.current);
     }
-    
+
     return () => observer.disconnect();
   }, []);
-  
+
   const Icon = project.icon;
-  
+
   return (
-    <div 
+    <div
       ref={cardRef}
       className={`project-card ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} transition-all duration-700`}
-      style={{ 
+      style={{
         transitionDelay: `${(index % 3) * 100}ms`,
         transform: isVisible ? `rotate(${project.rotation})` : 'rotate(0deg) translateY(32px)'
       }}
@@ -564,12 +576,12 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         </div>
         <SDGIcon number={project.sdg} size="sm" />
       </div>
-      
+
       {/* Central Idea */}
       <div className="central-idea-box mb-4">
         <p className="text-sm md:text-base">{project.centralIdea}</p>
       </div>
-      
+
       {/* Lines of Inquiry */}
       <div className="info-box mb-4">
         <h4 className="font-semibold text-pyp-dark mb-2 flex items-center gap-2">
@@ -585,7 +597,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           ))}
         </ul>
       </div>
-      
+
       {/* Specified Concepts */}
       <div className="info-box mb-4">
         <h4 className="font-semibold text-pyp-dark mb-2 flex items-center gap-2">
@@ -594,8 +606,8 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
         </h4>
         <div className="flex flex-wrap gap-2">
           {project.concepts.map((concept, i) => (
-            <span 
-              key={i} 
+            <span
+              key={i}
               className="px-3 py-1 bg-pyp-orange/10 text-pyp-orange rounded-full text-sm font-medium"
             >
               {concept}
@@ -603,11 +615,11 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           ))}
         </div>
       </div>
-      
+
       {/* Illustration */}
       <div className="relative h-40 rounded-xl overflow-hidden bg-pyp-beige">
-        <img 
-          src={project.image} 
+        <img
+          src={project.image}
           alt={project.title}
           className="w-full h-full object-contain"
         />
@@ -626,12 +638,9 @@ function ProjectsSection() {
           <h2 className="font-display text-4xl md:text-5xl text-pyp-dark mb-4">
             Exhibition Projects
           </h2>
-          <p className="text-pyp-dark/70 max-w-2xl mx-auto">
-            Explore the diverse range of inquiry-based projects created by our students, 
-            each addressing real-world issues aligned with the UN Sustainable Development Goals.
-          </p>
+          <div className="w-24 h-1 bg-pyp-orange mx-auto rounded-full" />
         </div>
-        
+
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
@@ -647,7 +656,7 @@ function ProjectsSection() {
 function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -657,21 +666,21 @@ function AboutSection() {
       },
       { threshold: 0.2 }
     );
-    
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
+
     return () => observer.disconnect();
   }, []);
-  
+
   const stats = [
     { number: 21, label: "Student Projects" },
     { number: 13, label: "UN SDGs Covered" },
     { number: 100, label: "+ Students" },
     { number: 1, label: "Amazing Showcase" },
   ];
-  
+
   return (
     <section id="about" ref={sectionRef} className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -683,26 +692,26 @@ function AboutSection() {
             </h2>
             <div className="space-y-4 text-pyp-dark/80">
               <p>
-                The PYP Exhibition represents the culmination of students' learning journey in the 
-                Primary Years Programme. It showcases their ability to conduct in-depth inquiries 
+                The PYP Exhibition represents the culmination of students' learning journey in the
+                Primary Years Programme. It showcases their ability to conduct in-depth inquiries
                 into real-world issues that matter to them and their communities.
               </p>
               <p>
-                Through collaborative research, critical thinking, and creative expression, our 
-                students explore topics connected to the UN Sustainable Development Goals, 
-                demonstrating their understanding of key concepts and their development as 
+                Through collaborative research, critical thinking, and creative expression, our
+                students explore topics connected to the UN Sustainable Development Goals,
+                demonstrating their understanding of key concepts and their development as
                 internationally-minded learners.
               </p>
               <p>
-                The exhibition empowers students to take ownership of their learning and make 
+                The exhibition empowers students to take ownership of their learning and make
                 a positive difference in the world around them.
               </p>
             </div>
-            
+
             {/* Stats */}
             <div className="grid grid-cols-2 gap-4 mt-8">
               {stats.map((stat, index) => (
-                <div 
+                <div
                   key={index}
                   className={`bg-pyp-beige rounded-2xl p-4 text-center transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                   style={{ transitionDelay: `${300 + index * 100}ms` }}
@@ -713,7 +722,7 @@ function AboutSection() {
               ))}
             </div>
           </div>
-          
+
           {/* Visual */}
           <div className={`relative transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
             <div className="relative">
@@ -728,7 +737,7 @@ function AboutSection() {
                     <p className="text-sm text-pyp-dark/60">Student-driven exploration</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 bg-pyp-green/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
@@ -739,7 +748,7 @@ function AboutSection() {
                       <p className="text-sm text-pyp-dark/70">Analyzing issues from multiple perspectives</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 bg-blue-500/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                       <Users className="w-4 h-4 text-blue-500" />
@@ -749,7 +758,7 @@ function AboutSection() {
                       <p className="text-sm text-pyp-dark/70">Working together to find solutions</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 bg-purple-500/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                       <Globe className="w-4 h-4 text-purple-500" />
@@ -773,7 +782,7 @@ function AboutSection() {
 function SDGsSection() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -783,14 +792,14 @@ function SDGsSection() {
       },
       { threshold: 0.2 }
     );
-    
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-    
+
     return () => observer.disconnect();
   }, []);
-  
+
   return (
     <section id="sdgs" ref={sectionRef} className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -800,20 +809,20 @@ function SDGsSection() {
             United Nations Sustainable Development Goals
           </h2>
           <p className="text-pyp-dark/70 max-w-2xl mx-auto">
-            Our projects align with the UN SDGs to create a better world. 
+            Our projects align with the UN SDGs to create a better world.
             Each project contributes to addressing global challenges and promoting sustainable development.
           </p>
         </div>
-        
+
         {/* SDG Grid */}
         <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4">
           {sdgs.map((sdg, index) => (
-            <div 
+            <div
               key={sdg.number}
               className={`group transition-all duration-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
               style={{ transitionDelay: `${index * 50}ms` }}
             >
-              <div 
+              <div
                 className="aspect-square rounded-2xl flex flex-col items-center justify-center p-3 text-white text-center cursor-pointer transition-transform hover:scale-110 shadow-md"
                 style={{ backgroundColor: sdg.color }}
               >
@@ -823,12 +832,12 @@ function SDGsSection() {
             </div>
           ))}
         </div>
-        
+
         {/* Learn More Link */}
         <div className={`text-center mt-10 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <a 
-            href="https://sdgs.un.org/goals" 
-            target="_blank" 
+          <a
+            href="https://sdgs.un.org/goals"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-pyp-orange hover:text-pyp-orange/80 font-semibold transition-colors"
           >
@@ -863,7 +872,7 @@ function Footer() {
               Empowering future leaders through quality education
             </p>
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h4 className="font-display font-bold text-lg mb-4">Quick Links</h4>
@@ -871,10 +880,10 @@ function Footer() {
               <li><a href="#projects" className="text-white/70 hover:text-pyp-orange transition-colors text-sm">Projects</a></li>
               <li><a href="#about" className="text-white/70 hover:text-pyp-orange transition-colors text-sm">About PYP</a></li>
               <li><a href="#sdgs" className="text-white/70 hover:text-pyp-orange transition-colors text-sm">UN SDGs</a></li>
-              <li><a href="https://www.ibo.org" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-pyp-orange transition-colors text-sm inline-flex items-center gap-1">IB World School <ExternalLink className="w-3 h-3"/></a></li>
+              <li><a href="https://www.ibo.org" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-pyp-orange transition-colors text-sm inline-flex items-center gap-1">IB World School <ExternalLink className="w-3 h-3" /></a></li>
             </ul>
           </div>
-          
+
           {/* Contact */}
           <div>
             <h4 className="font-display font-bold text-lg mb-4">Connect With Us</h4>
@@ -894,7 +903,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        
+
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/50 text-sm">
