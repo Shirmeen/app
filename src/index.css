@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 33% 97%;
+    --foreground: 0 0% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+    --primary: 25 75% 47%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 48 33% 97%;
+    --secondary-foreground: 0 0% 20%;
+    --muted: 48 20% 92%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 146 50% 36%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 25 75% 47%;
+    --input: 48 20% 92%;
+    --ring: 25 75% 47%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-pyp-beige text-pyp-dark font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .central-idea-box {
+    @apply bg-pyp-orange text-white rounded-2xl p-4 font-semibold text-center shadow-md;
+  }
+  
+  .info-box {
+    @apply bg-white rounded-2xl p-4 border-2 border-pyp-orange/20 shadow-sm;
+  }
+  
+  .project-card {
+    @apply bg-white rounded-3xl p-6 shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-2;
+  }
+  
+  .sdg-badge {
+    @apply inline-flex items-center justify-center w-12 h-12 rounded-xl text-white font-bold text-sm shadow-md;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .gradient-orange {
+    background: linear-gradient(135deg, #d2691e 0%, #e88d4a 100%);
+  }
+  
+  .pattern-dots {
+    background-image: radial-gradient(circle, #d2691e 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5dc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d2691e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b85c1a;
+}
+
+/* Animation utilities */
+.animate-in {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+.animate-in-delay-1 {
+  animation: slide-up 0.6s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.animate-in-delay-2 {
+  animation: slide-up 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-in-delay-3 {
+  animation: slide-up 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+/* Curved text for hero */
+.curved-text {
+  position: relative;
+  display: inline-block;
+}
+
+/* Floating animation for decorative elements */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+.gentle-float {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+/* Card rotation variations */
+.card-rotate-1 { transform: rotate(-1deg); }
+.card-rotate-2 { transform: rotate(1deg); }
+.card-rotate-3 { transform: rotate(-0.5deg); }
+.card-rotate-4 { transform: rotate(0.5deg); }
