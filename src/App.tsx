@@ -460,14 +460,32 @@ function HeroSection() {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-20">
         {/* School Name */}
-        <div className="animate-in mb-8">
-          <p className="text-pyp-dark/80 font-medium text-sm md:text-base uppercase tracking-wider">
-            Crescent Model Higher Secondary School
+        <div className="animate-in mb-8 flex flex-col items-center">
+          <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
+            <img
+              src="/crescent_logo.png"
+              alt="Crescent Logo"
+              className="w-20 h-20 md:w-28 md:h-28 object-contain animate-float"
+            />
+            <div className="text-center md:text-left">
+              <p className="text-pyp-dark font-bold text-xl md:text-2xl uppercase tracking-widest mb-1">
+                Crescent Model Higher Secondary School
+              </p>
+              <p className="text-pyp-dark/80 font-medium text-lg md:text-xl">
+                Girls Campus
+              </p>
+            </div>
+          </div>
+          
+          {/* Main Hero Heading */}
+          <h1 className="font-display text-5xl md:text-7xl lg:text-9xl text-pyp-orange text-shadow-xl mb-6">
+            PYP V Exhibition
+          </h1>
+          <p className="text-pyp-dark font-black text-2xl md:text-4xl mb-10 tracking-[0.2em] text-pyp-green">
+            2026
           </p>
-          <p className="text-pyp-dark/80 font-medium text-sm md:text-base mb-6">
-            Girls Campus
-          </p>
-          <p className="text-pyp-dark/90 text-xl md:text-2xl max-w-3xl mx-auto font-medium leading-relaxed bg-white/40 backdrop-blur-sm p-6 rounded-3xl shadow-sm border border-white/50">
+
+          <p className="text-pyp-dark/90 text-xl md:text-2xl max-w-4xl mx-auto font-medium leading-relaxed bg-white/60 backdrop-blur-md p-8 rounded-[2.5rem] shadow-2xl border border-white/40 transform hover:scale-[1.02] transition-transform duration-500">
             Explore the diverse range of inquiry-based projects created by our students, 
             each addressing real-world issues aligned with the UN Sustainable Development Goals.
           </p>
@@ -491,25 +509,14 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* Main Title */}
-        <div className="animate-in-delay-2 mb-8">
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-pyp-orange text-shadow-lg">
-            PYP V Exhibition
-          </h1>
-          <p className="text-pyp-dark/70 text-lg md:text-xl mt-4 font-medium">
-            2026
-          </p>
-        </div>
-
-        {/* Tagline */}
-        {/* Tagline & Call to Action */}
-        <div className="animate-in-delay-3">
+        {/* Call to Action */}
+        <div className="animate-in-delay-3 mt-10">
           <a
             href="#projects"
-            className="inline-flex items-center gap-2 bg-pyp-orange text-white px-8 py-3 rounded-full font-semibold hover:bg-pyp-orange/90 transition-all hover:scale-105 shadow-xl"
+            className="inline-flex items-center gap-2 bg-pyp-orange text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-pyp-orange/90 transition-all hover:scale-105 shadow-2xl"
           >
             Go to Exhibition
-            <ChevronDown className="w-5 h-5" />
+            <ChevronDown className="w-6 h-6" />
           </a>
         </div>
       </div>
