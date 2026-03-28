@@ -28,7 +28,9 @@ import {
   BookOpen,
   Target,
   Lightbulb,
-  Gavel
+  Gavel,
+  Zap,
+  Star
 } from 'lucide-react';
 
 // Project data
@@ -44,13 +46,13 @@ const projects = [
     ],
     concepts: ["Causation", "Change", "Responsibility"],
     sdg: 11,
-    image: "/project-tourism.png",
+    image: "project-tourism.png",
     icon: Globe,
     rotation: "-1deg"
   },
   {
     id: 2,
-    title: "Gaming",
+    title: "گیمز کا نشہ",
     centralIdea: "Excessive gaming affects our lifestyle",
     linesOfInquiry: [
       "Types and reasons children play video games",
@@ -59,7 +61,7 @@ const projects = [
     ],
     concepts: ["Form", "Causation", "Responsibility"],
     sdg: 3,
-    image: "/project-gaming.png",
+    image: "project-gaming.png",
     icon: Gamepad2,
     rotation: "1deg"
   },
@@ -74,7 +76,7 @@ const projects = [
     ],
     concepts: ["Perspective", "Responsibility", "Causation"],
     sdg: 10,
-    image: "/project-beauty.png",
+    image: "project-beauty.png",
     icon: Heart,
     rotation: "-0.5deg"
   },
@@ -89,13 +91,13 @@ const projects = [
     ],
     concepts: ["Form", "Causation", "Responsibility"],
     sdg: 3,
-    image: "/project-inclusion.png",
+    image: "project-inclusion.png",
     icon: Users,
     rotation: "0.5deg"
   },
   {
     id: 5,
-    title: "Nutrition",
+    title: "متوازن غذا",
     centralIdea: "Nutrition choices influence physical health",
     linesOfInquiry: [
       "The role of nutrients in the body",
@@ -104,13 +106,13 @@ const projects = [
     ],
     concepts: ["Function", "Connection", "Responsibility"],
     sdg: 3,
-    image: "/project-nutrition.png",
+    image: "project-nutrition.png",
     icon: Apple,
     rotation: "-1deg"
   },
   {
     id: 6,
-    title: "Child Labour",
+    title: "چائلڈ لیبر",
     centralIdea: "Child domestic labour violates children's rights",
     linesOfInquiry: [
       "Effects of denial of children's rights",
@@ -119,13 +121,13 @@ const projects = [
     ],
     concepts: ["Causation", "Perspective", "Responsibility"],
     sdg: 4,
-    image: "/project-childlabour.png",
+    image: "project-childlabour.png",
     icon: Hand,
     rotation: "1deg"
   },
   {
     id: 7,
-    title: "Food Wastage",
+    title: "خوراک کا ضیاع",
     centralIdea: "Food wastage at social gatherings leads to challenges in the community",
     linesOfInquiry: [
       "Causes of food wastage at social gatherings",
@@ -134,13 +136,13 @@ const projects = [
     ],
     concepts: ["Causation", "Connection", "Responsibility"],
     sdg: 2,
-    image: "/project-foodwaste.png",
+    image: "project-foodwaste.png",
     icon: ShoppingBag,
     rotation: "-0.5deg"
   },
   {
     id: 8,
-    title: "Financial Independence",
+    title: "خواتین کی خود مختاری",
     centralIdea: "Financial independence influences girls' life choices",
     linesOfInquiry: [
       "Impact of financial independence on girls' decisions",
@@ -149,7 +151,7 @@ const projects = [
     ],
     concepts: ["Causation", "Perspective", "Responsibility"],
     sdg: 5,
-    image: "/project-financial.png",
+    image: "project-financial.png",
     icon: Wallet,
     rotation: "0.5deg"
   },
@@ -164,9 +166,13 @@ const projects = [
     ],
     concepts: ["Causation", "Perspective", "Responsibility"],
     sdg: 3,
-    image: "/project-ai.png",
+    image: "project-ai.png",
     icon: Brain,
-    rotation: "-1deg"
+    rotation: "-1deg",
+    link: {
+      url: "https://share.google/hoyEvVBOD2Tg0844L",
+      label: "View in Minute Mirror ePaper (Page 4)"
+    }
   },
   {
     id: 10,
@@ -179,7 +185,7 @@ const projects = [
     ],
     concepts: ["Connection", "Perspective", "Responsibility"],
     sdg: 3,
-    image: "/project-career.png",
+    image: "project-career.png",
     icon: Briefcase,
     rotation: "1deg"
   },
@@ -194,13 +200,13 @@ const projects = [
     ],
     concepts: ["Form", "Change", "Connection"],
     sdg: 9,
-    image: "/project-textile.png",
+    image: "project-textile.png",
     icon: Scissors,
     rotation: "-0.5deg"
   },
   {
     id: 12,
-    title: "Stray Animals",
+    title: "جانوروں پر ظلم",
     centralIdea: "Human action and choices affect the life and wellbeing of stray animals",
     linesOfInquiry: [
       "Human behaviors and their impact on stray animals",
@@ -209,7 +215,7 @@ const projects = [
     ],
     concepts: ["Causation", "Connection", "Responsibility"],
     sdg: 15,
-    image: "/project-strayanimals.png",
+    image: "project-strayanimals.png",
     icon: Dog,
     rotation: "0.5deg"
   },
@@ -224,7 +230,7 @@ const projects = [
     ],
     concepts: ["Causation", "Connection", "Responsibility"],
     sdg: 8,
-    image: "/project-braindrain.png",
+    image: "project-braindrain.png",
     icon: Plane,
     rotation: "-1deg"
   },
@@ -239,7 +245,7 @@ const projects = [
     ],
     concepts: ["Form", "Causation", "Responsibility"],
     sdg: 10,
-    image: "/project-stereotypes.png",
+    image: "project-stereotypes.png",
     icon: Scale,
     rotation: "1deg"
   },
@@ -254,13 +260,13 @@ const projects = [
     ],
     concepts: ["Causation", "Perspective", "Responsibility"],
     sdg: 5,
-    image: "/project-dowry.png",
+    image: "project-dowry.png",
     icon: Gavel,
     rotation: "-0.5deg"
   },
   {
     id: 16,
-    title: "Begging Mafia",
+    title: "بھکاری مافیا",
     centralIdea: "Begging mafia exploits society",
     linesOfInquiry: [
       "Causes of organized begging systems",
@@ -269,13 +275,13 @@ const projects = [
     ],
     concepts: ["Causation", "Function", "Connection"],
     sdg: 1,
-    image: "/project-begging.png",
+    image: "project-begging.png",
     icon: Coins,
     rotation: "0.5deg"
   },
   {
     id: 17,
-    title: "Online Communication",
+    title: "ان لائن ہراسانی",
     centralIdea: "Online communication affects how we connect with others and can create both opportunities and risks",
     linesOfInquiry: [
       "The impact of online interactions on emotions and relationships",
@@ -284,7 +290,7 @@ const projects = [
     ],
     concepts: ["Connection", "Causation", "Responsibility"],
     sdg: 3,
-    image: "/project-cyberbullying.png",
+    image: "project-cyberbullying.png",
     icon: Smartphone,
     rotation: "-1deg"
   },
@@ -299,7 +305,7 @@ const projects = [
     ],
     concepts: ["Causation", "Connection", "Responsibility"],
     sdg: 13,
-    image: "/project-deforestation.png",
+    image: "project-deforestation.png",
     icon: TreePine,
     rotation: "1deg"
   },
@@ -314,7 +320,7 @@ const projects = [
     ],
     concepts: ["Perspective", "Connection", "Responsibility"],
     sdg: 3,
-    image: "/project-bodyshaming.png",
+    image: "project-bodyshaming.png",
     icon: Frown,
     rotation: "-0.5deg"
   },
@@ -329,7 +335,7 @@ const projects = [
     ],
     concepts: ["Connection", "Perspective", "Responsibility"],
     sdg: 12,
-    image: "/project-brands.png",
+    image: "project-brands.png",
     icon: ShoppingCart,
     rotation: "0.5deg"
   },
@@ -344,7 +350,7 @@ const projects = [
     ],
     concepts: ["Form", "Causation", "Perspective"],
     sdg: 16,
-    image: "/project-media.png",
+    image: "project-media.png",
     icon: Radio,
     rotation: "-1deg"
   }
@@ -368,7 +374,7 @@ const sdgs = [
 ];
 
 // SDG Icon Component
-function SDGIcon({ number, size = "md" }: { number: number; size?: "sm" | "md" | "lg" }) {
+function SDGIcon({ number, displayNo, size = "md" }: { number: number; displayNo?: number | string; size?: "sm" | "md" | "lg" }) {
   const sdg = sdgs.find(s => s.number === number);
   const sizeClasses = {
     sm: "w-8 h-8 text-xs",
@@ -381,7 +387,7 @@ function SDGIcon({ number, size = "md" }: { number: number; size?: "sm" | "md" |
       className={`${sizeClasses[size]} rounded-xl flex items-center justify-center text-white font-bold shadow-md`}
       style={{ backgroundColor: sdg?.color || '#666' }}
     >
-      {number}
+      {displayNo || number}
     </div>
   );
 }
@@ -405,7 +411,7 @@ function Navigation() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="/crescent_logo.png"
+              src="crescent_logo.png"
               alt="Crescent Logo"
               className="w-12 h-12 object-contain"
             />
@@ -450,70 +456,88 @@ function HeroSection() {
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/pyp-pattern.png" 
-          alt="PYP Geometric Pattern" 
+          src="pyp-pattern.png"
+          alt="PYP Geometric Pattern"
           className="w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-pyp-beige/60 via-transparent to-pyp-beige" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-20">
-        {/* School Name */}
+      {/* Content: Increased padding to prevent overlap with fixed navigation */}
+      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center pt-28 md:pt-40">
+        {/* School Name and Logos */}
         <div className="animate-in mb-8 flex flex-col items-center">
-          <div className="flex flex-col md:flex-row items-center gap-6 mb-8">
-            <img
-              src="/crescent_logo.png"
-              alt="Crescent Logo"
-              className="w-20 h-20 md:w-28 md:h-28 object-contain animate-float"
-            />
-            <div className="text-center md:text-left">
-              <p className="text-pyp-dark font-bold text-xl md:text-2xl uppercase tracking-widest mb-1">
+          <div className="flex flex-col items-center gap-6 mb-8">
+            {/* Responsive Branding Cluster: Stacked on Mobile, Side-by-Side on Desktop */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-20 mb-8 md:mb-12">
+              <img
+                src="crescent_logo.png"
+                alt="Crescent Logo"
+                className="w-28 h-28 md:w-56 md:h-56 object-contain animate-float-logo drop-shadow-xl"
+              />
+              {/* Divider: Only visible on desktop when icons are side-by-side */}
+              <div className="w-1.5 h-12 md:h-40 bg-pyp-orange/20 rounded-full hidden md:block" />
+              <img
+                src="sdg-circle.png"
+                alt="UN SDG Circle"
+                className="w-32 h-32 md:w-80 md:h-80 object-contain animate-float-logo-slow drop-shadow-xl"
+              />
+            </div>
+
+            <div className="text-center">
+              <p className="text-pyp-dark font-bold text-base md:text-2xl uppercase tracking-widest mb-1 px-4">
                 Crescent Model Higher Secondary School
               </p>
-              <p className="text-pyp-dark/80 font-medium text-lg md:text-xl">
+              <p className="inline-block px-8 py-2 bg-[#2E8B7A] text-white font-display font-bold text-base md:text-2xl rounded-full shadow-lg mt-4 tracking-wider uppercase ring-4 ring-[#2E8B7A]/20 border-2 border-white/30">
                 Girls Campus
               </p>
             </div>
           </div>
-          
+
           {/* Main Hero Heading */}
-          <h1 className="font-display text-5xl md:text-7xl lg:text-9xl text-pyp-orange text-shadow-xl mb-6">
+          <h1 className="font-display text-4xl md:text-7xl lg:text-9xl text-pyp-orange text-shadow-xl mb-4 md:mb-6">
             PYP V Exhibition
           </h1>
-          <p className="text-pyp-dark font-black text-2xl md:text-4xl mb-10 tracking-[0.2em] text-pyp-green">
+          <p className="text-pyp-dark font-black text-xl md:text-4xl mb-8 md:mb-10 tracking-[0.2em] text-pyp-green">
             2026
           </p>
 
-          <p className="text-pyp-dark/90 text-xl md:text-2xl max-w-4xl mx-auto font-medium leading-relaxed bg-white/60 backdrop-blur-md p-8 rounded-[2.5rem] shadow-2xl border border-white/40 transform hover:scale-[1.02] transition-transform duration-500">
-            Explore the diverse range of inquiry-based projects created by our students, 
+          <p className="text-pyp-dark/90 text-sm md:text-2xl max-w-4xl mx-auto font-medium leading-relaxed bg-white/60 backdrop-blur-md p-6 md:p-10 rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl border border-white/40 transform hover:scale-[1.02] transition-transform duration-500">
+            Explore the diverse range of inquiry-based projects created by our students,
             each addressing real-world issues aligned with the UN Sustainable Development Goals.
           </p>
         </div>
 
         {/* Logos */}
-        <div className="flex justify-center items-center gap-8 mb-8 animate-in-delay-1">
-          <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center p-3 animate-float overflow-hidden">
+        <div className="flex justify-center items-center gap-4 md:gap-12 mb-8 animate-in-delay-1 flex-wrap">
+          <div className="w-20 h-20 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center p-3 animate-float overflow-hidden">
             <img
-              src="/crescent_logo.png"
+              src="crescent_logo.png"
               alt="Crescent School Logo"
               className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
             />
           </div>
-          <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center p-4 animate-float overflow-hidden" style={{ animationDelay: '0.5s' }}>
+          <div className="w-20 h-20 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center p-4 animate-float overflow-hidden" style={{ animationDelay: '0.3s' }}>
             <img
-              src="/ib-logo.png"
-              alt="IB Logo"
-              className="w-full h-full object-contain"
+              src="ib-logo.png"
+              alt="IB World School Logo"
+              className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
+            />
+          </div>
+          <div className="w-20 h-20 md:w-32 md:h-32 bg-white rounded-2xl shadow-xl flex items-center justify-center p-4 animate-float overflow-hidden" style={{ animationDelay: '0.6s' }}>
+            <img
+              src="ib-logo-mini.png"
+              alt="IB Logo Badge"
+              className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
             />
           </div>
         </div>
 
         {/* Call to Action */}
-        <div className="animate-in-delay-3 mt-10">
+        <div className="animate-in-delay-3 mt-6 md:mt-10">
           <a
             href="#projects"
-            className="inline-flex items-center gap-2 bg-pyp-orange text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-pyp-orange/90 transition-all hover:scale-105 shadow-2xl"
+            className="inline-flex items-center gap-2 bg-pyp-orange text-white px-8 py-3 md:px-10 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-pyp-orange/90 transition-all hover:scale-105 shadow-2xl"
           >
             Go to Exhibition
             <ChevronDown className="w-6 h-6" />
@@ -521,11 +545,51 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* Vertical Hashtag */}
-      <div className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 hidden lg:block">
-        <span className="writing-vertical text-pyp-orange font-display font-bold text-2xl tracking-wider opacity-80">
-          #GIRLPOWER
-        </span>
+      {/* Girlpower Floating Badge - REVISED: Hidden on small mobile screens to prevent overlap */}
+      <div className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-20">
+        <div className="bg-[#2E8B7A] text-white font-display font-bold text-xl md:text-2xl py-12 px-5 rounded-l-[2.5rem] shadow-2xl border-l border-t border-b border-white/20 transform hover:-translate-x-2 transition-transform duration-300">
+          <span className="[writing-mode:vertical-rl] uppercase tracking-[0.3em]">#GIRLPOWER</span>
+        </div>
+      </div>
+
+      {/* Moving Slider (Ticker) */}
+      <div className="absolute bottom-0 w-full bg-pyp-dark/95 backdrop-blur-lg py-5 overflow-hidden z-20 border-t border-pyp-orange/30">
+        <div className="flex whitespace-nowrap animate-marquee">
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="flex items-center gap-16 px-8">
+              <span className="text-white font-bold text-lg flex items-center gap-4">
+                <span className="w-9 h-9 rounded-full bg-pink-500 flex items-center justify-center shadow-lg">
+                  <Zap className="w-5 h-5 text-white" />
+                </span>
+                #GIRLPOWER
+              </span>
+              <span className="text-white/70 font-bold text-lg flex items-center gap-4">
+                <span className="w-9 h-9 rounded-full bg-blue-500 flex items-center justify-center shadow-lg">
+                  <Globe className="w-5 h-5 text-white" />
+                </span>
+                Explore the World
+              </span>
+              <span className="text-white/70 font-bold text-lg flex items-center gap-4">
+                <span className="w-9 h-9 rounded-full bg-purple-500 flex items-center justify-center shadow-lg">
+                  <Users className="w-5 h-5 text-white" />
+                </span>
+                Connect Cultures
+              </span>
+              <span className="text-white/70 font-bold text-lg flex items-center gap-4">
+                <span className="w-9 h-9 rounded-full bg-green-500 flex items-center justify-center shadow-lg">
+                  <TreePine className="w-5 h-5 text-white" />
+                </span>
+                Travel Responsibly
+              </span>
+              <span className="text-white font-extrabold text-lg flex items-center gap-4">
+                <span className="w-9 h-9 rounded-full bg-yellow-500 flex items-center justify-center shadow-lg">
+                  <Star className="w-5 h-5 text-white" />
+                </span>
+                Empowered Girls, Better World
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
 
       <style>{`
@@ -534,13 +598,38 @@ function HeroSection() {
           text-orientation: mixed;
           transform: rotate(180deg);
         }
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          animation: marquee 30s linear infinite;
+        }
+        @keyframes float-gentle {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+        }
+        .animate-float-logo {
+          animation: float-gentle 4s ease-in-out infinite;
+        }
+        .animate-float-logo-slow {
+          animation: float-gentle 6s ease-in-out infinite;
+          animation-delay: 0.5s;
+        }
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(-50%) translateY(-10px); }
+          50% { transform: translateY(-50%) translateY(10px); }
+        }
+        .animate-float-slow {
+          animation: float-slow 4s ease-in-out infinite;
+        }
       `}</style>
     </section>
   );
 }
 
 // Project Card Component
-function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
+function ProjectCard({ project, index, onOpenGallery }: { project: any; index: number; onOpenGallery?: (images: string[]) => void }) {
   const [isVisible, setIsVisible] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -579,9 +668,11 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           <div className="w-10 h-10 bg-pyp-orange/10 rounded-xl flex items-center justify-center">
             <Icon className="w-5 h-5 text-pyp-orange" />
           </div>
-          <h3 className="font-display font-bold text-lg text-pyp-dark">{project.title}</h3>
+          <h3 className="font-display font-bold text-xl text-pyp-dark leading-relaxed" dir="auto">
+            {project.title}
+          </h3>
         </div>
-        <SDGIcon number={project.sdg} size="sm" />
+        <SDGIcon number={project.sdg} displayNo={project.id} size="sm" />
       </div>
 
       {/* Central Idea */}
@@ -595,14 +686,154 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           <BookOpen className="w-4 h-4 text-pyp-orange" />
           Lines of Inquiry
         </h4>
-        <ul className="space-y-1">
-          {project.linesOfInquiry.map((line, i) => (
+        <ul className="space-y-1 mb-4">
+          {(project.linesOfInquiry || []).map((line: string, i: number) => (
             <li key={i} className="text-sm text-pyp-dark/80 flex items-start gap-2">
               <span className="text-pyp-orange font-bold">{i + 1}.</span>
               <span>{line}</span>
             </li>
           ))}
         </ul>
+
+        {/* External Link if exists */}
+        {project.link && (
+          <a
+            href={project.link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 w-full py-2 px-3 bg-pyp-orange/90 text-white rounded-lg font-bold text-xs hover:bg-pyp-orange transition-all hover:scale-[1.01] shadow-sm group"
+          >
+            <ExternalLink className="w-3 h-3 group-hover:rotate-12 transition-transform" />
+            {project.link.label}
+          </a>
+        )}
+
+        {/* Child Labour Gallery Button */}
+        {project.id === 6 && onOpenGallery && (
+          <button
+            onClick={() => onOpenGallery([
+              "child labour 1.jpeg",
+              "child labour 2.jpeg",
+              "child labour 3.jpeg",
+              "child labour 4.jpeg"
+            ])}
+            className="flex items-center justify-center gap-2 w-full mt-3 py-2 px-3 bg-[#c5192d] text-white rounded-lg font-bold text-sm hover:bg-[#a01424] transition-all hover:scale-[1.01] shadow-md group"
+          >
+            <ExternalLink className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+            View Photo Gallery
+          </button>
+        )}
+
+        {/* Food Wastage Gallery Button */}
+        {project.id === 7 && onOpenGallery && (
+          <button
+            onClick={() => onOpenGallery([
+              "food waste 1.jpeg",
+              "food waste 2.jpeg",
+              "food waste 3.jpeg",
+              "food waste 4.jpeg"
+            ])}
+            className="flex items-center justify-center gap-2 w-full mt-3 py-2 px-3 bg-pyp-orange text-white rounded-lg font-bold text-sm hover:bg-pyp-orange/90 transition-all hover:scale-[1.01] shadow-md group"
+          >
+            <ExternalLink className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+            View Photo Gallery
+          </button>
+        )}
+
+        {/* Girls Empowerment Gallery Button */}
+        {project.id === 8 && onOpenGallery && (
+          <button
+            onClick={() => onOpenGallery([
+              "empowerment 1.jpeg",
+              "empowerment 2.jpeg",
+              "empowerment 3.jpeg",
+              "empowerment 4.jpeg",
+              "empowerment 5.jpeg",
+              "empowerment 6.jpeg",
+              "empowerment 7.jpeg",
+              "empowerment 8.jpeg",
+              "empowerment 9.jpeg",
+              "empowerment 10.jpeg"
+            ])}
+            className="flex items-center justify-center gap-2 w-full mt-3 py-2 px-3 bg-[#e5243b] text-white rounded-lg font-bold text-sm hover:bg-[#c5192d] transition-all hover:scale-[1.01] shadow-md group"
+          >
+            <ExternalLink className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+            View Photo Gallery
+          </button>
+        )}
+
+        {/* Gaming Addiction Gallery Button */}
+        {project.id === 2 && onOpenGallery && (
+          <button
+            onClick={() => onOpenGallery([
+              "gaming 1.jpeg",
+              "gaming 2.jpeg",
+              "gaming 3.jpeg",
+              "gaming 4.jpeg"
+            ])}
+            className="flex items-center justify-center gap-2 w-full mt-3 py-2 px-3 bg-[#0d6efd] text-white rounded-lg font-bold text-sm hover:bg-[#0b5ed7] transition-all hover:scale-[1.01] shadow-md group"
+          >
+            <ExternalLink className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+            View Photo Gallery
+          </button>
+        )}
+
+        {/* Healthy Food Gallery Button */}
+        {project.id === 5 && onOpenGallery && (
+          <button
+            onClick={() => onOpenGallery([
+              "nutrition 1.jpeg",
+              "nutrition 2.jpeg",
+              "nutrition 3.jpeg"
+            ])}
+            className="flex items-center justify-center gap-2 w-full mt-3 py-2 px-3 bg-[#4c9f38] text-white rounded-lg font-bold text-sm hover:bg-[#3d7f2d] transition-all hover:scale-[1.01] shadow-md group"
+          >
+            <ExternalLink className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+            View Photo Gallery
+          </button>
+        )}
+
+        {/* Animal Abuse Gallery Button */}
+        {project.id === 12 && onOpenGallery && (
+          <div className="space-y-2">
+            <button
+              onClick={() => onOpenGallery([
+                "animals 1.jpeg",
+                "animals 2.jpeg",
+                "animals 3.jpeg",
+                "animals 4.jpeg"
+              ])}
+              className="flex items-center justify-center gap-2 w-full mt-3 py-2 px-3 bg-[#56c02b] text-white rounded-lg font-bold text-sm hover:bg-[#46a020] transition-all hover:scale-[1.01] shadow-md group"
+            >
+              <ExternalLink className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+              View Photo Gallery
+            </button>
+            <a
+              href="https://rescue4paws.base44.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-2 px-3 bg-[#0d6efd] text-white rounded-lg font-bold text-sm hover:bg-[#0b5ed7] transition-all hover:scale-[1.01] shadow-md group"
+            >
+              <ExternalLink className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+              Website Made by Students
+            </a>
+          </div>
+        )}
+
+        {/* Online Harassment Gallery Button */}
+        {project.id === 17 && onOpenGallery && (
+          <button
+            onClick={() => onOpenGallery([
+              "online 1.jpeg",
+              "online 2.jpeg",
+              "online 3.jpeg"
+            ])}
+            className="flex items-center justify-center gap-2 w-full mt-3 py-2 px-3 bg-[#dd1367] text-white rounded-lg font-bold text-sm hover:bg-[#c2105a] transition-all hover:scale-[1.01] shadow-md group"
+          >
+            <ExternalLink className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+            View Photo Gallery
+          </button>
+        )}
       </div>
 
       {/* Specified Concepts */}
@@ -612,7 +843,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
           Specified Concepts
         </h4>
         <div className="flex flex-wrap gap-2">
-          {project.concepts.map((concept, i) => (
+          {(project.concepts || []).map((concept: string, i: number) => (
             <span
               key={i}
               className="px-3 py-1 bg-pyp-orange/10 text-pyp-orange rounded-full text-sm font-medium"
@@ -624,11 +855,12 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
       </div>
 
       {/* Illustration */}
-      <div className="relative h-40 rounded-xl overflow-hidden bg-pyp-beige">
+      <div className="relative h-40 rounded-xl overflow-hidden bg-pyp-beige mb-4">
         <img
           src={project.image}
           alt={project.title}
           className="w-full h-full object-contain"
+          loading="lazy"
         />
       </div>
     </div>
@@ -637,6 +869,17 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 
 // Projects Section
 function ProjectsSection() {
+  const [galleryImages, setGalleryImages] = useState<string[] | null>(null);
+
+  // Lock body scroll when gallery is open
+  useEffect(() => {
+    if (galleryImages) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [galleryImages]);
+
   return (
     <section id="projects" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -651,10 +894,38 @@ function ProjectsSection() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+            <ProjectCard key={project.id} project={project} index={index} onOpenGallery={setGalleryImages} />
           ))}
         </div>
       </div>
+
+      {/* Fullscreen Image Gallery Popup */}
+      {galleryImages && (
+        <div className="fixed inset-0 bg-black/95 z-[100] flex items-center justify-center p-4 md:p-10 animate-fade-in backdrop-blur-sm">
+          <button
+            onClick={() => setGalleryImages(null)}
+            className="absolute top-6 right-6 text-white hover:text-pyp-orange transition-colors z-50 bg-black/50 p-2 rounded-full"
+          >
+            <X className="w-8 h-8" />
+          </button>
+
+          <div className="w-full max-w-6xl h-full flex flex-col">
+            <h3 className="text-white text-3xl font-display font-bold mb-6 text-center">Project Gallery</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 overflow-y-auto pb-10 pr-2">
+              {galleryImages.map((src, i) => (
+                <div key={i} className="bg-white/5 p-2 rounded-2xl">
+                  <img
+                    src={src}
+                    alt={`Gallery Image ${i + 1}`}
+                    className="w-full h-auto max-h-[60vh] object-contain rounded-xl shadow-2xl"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
@@ -829,13 +1100,12 @@ function SDGsSection() {
               className={`group transition-all duration-500 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
               style={{ transitionDelay: `${index * 50}ms` }}
             >
-              <div
-                className="aspect-square rounded-2xl flex flex-col items-center justify-center p-3 text-white text-center cursor-pointer transition-transform hover:scale-110 shadow-md"
-                style={{ backgroundColor: sdg.color }}
-              >
-                <span className="text-2xl font-bold">{sdg.number}</span>
-                <span className="text-xs mt-1 leading-tight opacity-90">{sdg.name}</span>
-              </div>
+              <img
+                src={`https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-${sdg.number < 10 ? '0' + sdg.number : sdg.number}.jpg`}
+                alt={sdg.name}
+                className="w-full aspect-square rounded-2xl object-cover cursor-pointer hover:scale-105 transition-transform duration-300 shadow-md hover:shadow-xl"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>
@@ -927,8 +1197,35 @@ function Footer() {
 
 // Main App
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Hide loader after a short delay or when everything is ready
+    const timer = setTimeout(() => setIsLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="fixed inset-0 z-[100] bg-pyp-beige flex flex-col items-center justify-center">
+        <div className="relative">
+          <div className="w-24 h-24 border-4 border-pyp-orange/20 border-t-pyp-orange rounded-full animate-spin" />
+          <img
+            src="crescent_logo.png"
+            alt="Loading..."
+            className="absolute inset-0 w-12 h-12 m-auto object-contain animate-pulse"
+            loading="lazy"
+          />
+        </div>
+        <p className="mt-6 font-display font-bold text-pyp-dark animate-pulse">
+          PYP V Exhibition 2026
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-pyp-beige">
+    <div className="min-h-screen bg-pyp-beige selection:bg-pyp-orange/30">
       <Navigation />
       <HeroSection />
       <ProjectsSection />
