@@ -506,6 +506,35 @@ function HeroSection() {
             Explore the diverse range of inquiry-based projects created by our students,
             each addressing real-world issues aligned with the UN Sustainable Development Goals.
           </p>
+
+          {/* Scrolling SDG Image Strip — Official UN Icons */}
+          <div className="w-full max-w-5xl mx-auto mt-8 overflow-hidden rounded-2xl">
+            <div className="flex gap-3 w-max animate-sdg-scroll">
+              {[...Array(2)].map((_, pass) =>
+                Array.from({ length: 17 }, (_, i) => i + 1).map((n) => (
+                  <img
+                    key={`${pass}-${n}`}
+                    src={`https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-${n < 10 ? '0' + n : n}.jpg`}
+                    alt={`SDG ${n}`}
+                    className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer"
+                    loading="lazy"
+                  />
+                ))
+              )}
+            </div>
+            <style>{`
+              @keyframes sdg-scroll {
+                0%   { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              .animate-sdg-scroll {
+                animation: sdg-scroll 30s linear infinite;
+              }
+              .animate-sdg-scroll:hover {
+                animation-play-state: paused;
+              }
+            `}</style>
+          </div>
         </div>
 
         {/* Logos */}
