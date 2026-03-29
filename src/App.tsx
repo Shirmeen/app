@@ -373,22 +373,22 @@ const sdgs = [
   { number: 16, name: "Peace & Justice", color: "#00689d" },
 ];
 
-// SDG Icon Component
-function SDGIcon({ number, displayNo, size = "md" }: { number: number; displayNo?: number | string; size?: "sm" | "md" | "lg" }) {
-  const sdg = sdgs.find(s => s.number === number);
+// SDG Icon Component — uses official UN icon images
+function SDGIcon({ number, size = "md" }: { number: number; displayNo?: number | string; size?: "sm" | "md" | "lg" }) {
+  const padded = number < 10 ? '0' + number : String(number);
   const sizeClasses = {
-    sm: "w-8 h-8 text-xs",
-    md: "w-12 h-12 text-sm",
-    lg: "w-16 h-16 text-base"
+    sm: "w-10 h-10",
+    md: "w-14 h-14",
+    lg: "w-20 h-20"
   };
 
   return (
-    <div
-      className={`${sizeClasses[size]} rounded-xl flex items-center justify-center text-white font-bold shadow-md`}
-      style={{ backgroundColor: sdg?.color || '#666' }}
-    >
-      {displayNo || number}
-    </div>
+    <img
+      src={`https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-${padded}.jpg`}
+      alt={`SDG ${number}`}
+      className={`${sizeClasses[size]} rounded-xl object-cover shadow-md hover:scale-110 transition-transform duration-300`}
+      loading="lazy"
+    />
   );
 }
 
@@ -883,14 +883,29 @@ function ProjectCard({ project, index, onOpenGallery }: { project: any; index: n
         </div>
       </div>
 
-      {/* Illustration */}
-      <div className="relative h-40 rounded-xl overflow-hidden bg-pyp-beige mb-4">
+      {/* Illustration + SDG Badge */}
+      <div className="relative rounded-xl overflow-hidden bg-pyp-beige mb-4">
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-contain"
+          className="w-full h-40 object-contain"
           loading="lazy"
         />
+        {/* SDG Badge overlay */}
+        <div className="absolute bottom-2 right-2 flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-xl px-2 py-1.5 shadow-lg border border-white/60">
+          <img
+            src={`https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-${project.sdg < 10 ? '0' + project.sdg : project.sdg}.jpg`}
+            alt={`SDG ${project.sdg}`}
+            className="w-9 h-9 rounded-lg object-cover shadow-sm flex-shrink-0"
+            loading="lazy"
+          />
+          <div className="leading-tight">
+            <p className="text-[9px] font-bold text-gray-500 uppercase tracking-wide">SDG {project.sdg}</p>
+            <p className="text-[10px] font-semibold text-gray-800 leading-none">
+              {sdgs.find(s => s.number === project.sdg)?.name ?? ''}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
